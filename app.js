@@ -36,7 +36,6 @@ class App {
             this.app.use(cors({
                 origin:[
                     'http://localhost:3103',
-                    'http://10.10.9.210:3103',
                     `http://${process.env.IP}:${process.env.CLIENT_PORT}`
                     //접속을 허용할 ip 추가
                 ],
@@ -48,10 +47,7 @@ class App {
                     origin: [
                         `http://localhost:3103`, 
                         'http://127.0.0.1:3103',  //qa-private
-                        'http://20.249.5.188:3103', //qa-public
                         'http://127.0.0.1:3103',  //live-private
-                        'http://20.214.162.82:3103', //live-public
-                        'http://10.10.9.210:3103',
                         `http://${process.env.IP}:${process.env.CLIENT_PORT}`
                     ], // 허용할 호스트
                     methods: ['GET', 'POST'] // 허용할 HTTP 메소드 정의
